@@ -60,7 +60,6 @@ class MusubiTunerWanGenerateVideo:
             "required": {
                 "task": (TASK_CHOICES, {"default": "t2v-14B"}),
                 "prompt": ("STRING", {"multiline": True}),
-                "save_path": ("STRING", {"default": "output.mp4"}),
                 "dit": ("STRING", {"default": ""}),
                 "vae": ("STRING", {"default": ""}),
                 "t5": ("STRING", {"default": ""}),
@@ -325,6 +324,11 @@ class MusubiTunerWanGenerateVideo:
         except ValueError as e:
             raise MusubiTunerError(str(e))
 
+        # outputディレクトリのパスを自動設定
+        current_dir = Path(__file__).parent.parent  # ComfyUI-musubi-tunerディレクトリ
+        output_dir = current_dir / "output"
+        output_dir.mkdir(exist_ok=True)  # ディレクトリが存在しない場合は作成
+
         cmd_args = [
             "wan_generate_video.py",
             "--task",
@@ -332,7 +336,7 @@ class MusubiTunerWanGenerateVideo:
             "--prompt",
             kwargs["prompt"],
             "--save_path",
-            kwargs["save_path"],
+            str(output_dir),
             "--dit",
             kwargs["dit"],
             "--vae",

@@ -75,7 +75,6 @@
       "widgets_values": [
         "i2v-14B",
         "A boy with open mouth and closed eyes",
-        "C:\\Users\\keit\\Documents\\me\\lora\\data\\musubi-tuner\\outputs",
         "D:\\WAN2\\wan2.1_i2v_720p_14B_bf16.safetensors",
         "D:\\WAN2\\wan_2.1_vae.safetensors",
         "D:\\WAN2\\models_t5_umt5-xxl-enc-bf16.pth",
