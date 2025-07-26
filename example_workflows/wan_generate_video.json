@@ -1,0 +1,142 @@
+{
+  "id": "e9b389d5-0228-4437-af46-afa17e1d3ea3",
+  "revision": 0,
+  "last_node_id": 7,
+  "last_link_id": 6,
+  "nodes": [
+    {
+      "id": 7,
+      "type": "PreviewAny",
+      "pos": [
+        10729.654296875,
+        6836.0087890625
+      ],
+      "size": [
+        414.80755615234375,
+        287.7692565917969
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "source",
+          "type": "*",
+          "link": 6
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.45",
+        "Node name for S&R": "PreviewAny"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 6,
+      "type": "MusubiTunerWanGenerateVideo",
+      "pos": [
+        10184.96484375,
+        6838.96142578125
+      ],
+      "size": [
+        400,
+        1124
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "stdout",
+          "type": "STRING",
+          "links": [
+            6
+          ]
+        },
+        {
+          "name": "stderr",
+          "type": "STRING",
+          "links": null
+        },
+        {
+          "name": "return_code",
+          "type": "INT",
+          "links": null
+        }
+      ],
+      "properties": {
+        "aux_id": "keit0728/ComfyUI-musubi-tuner",
+        "ver": "7e687004332b6f1f9bb3287174ebb52f5cd60ac5",
+        "Node name for S&R": "MusubiTunerWanGenerateVideo"
+      },
+      "widgets_values": [
+        "i2v-14B",
+        "A boy with open mouth and closed eyes",
+        "C:\\Users\\keit\\Documents\\me\\lora\\data\\musubi-tuner\\outputs",
+        "D:\\WAN2\\wan2.1_i2v_720p_14B_bf16.safetensors",
+        "D:\\WAN2\\wan_2.1_vae.safetensors",
+        "D:\\WAN2\\models_t5_umt5-xxl-enc-bf16.pth",
+        832,
+        480,
+        1,
+        16,
+        4,
+        "",
+        1234,
+        "fixed",
+        true,
+        -1,
+        true,
+        false,
+        false,
+        false,
+        0,
+        "torch",
+        false,
+        "C:\\Users\\keit\\Documents\\me\\lora\\data\\musubi-tuner\\inputs\\test.png",
+        "",
+        "",
+        "D:\\WAN2\\models_clip_open-clip-xlm-roberta-large-vit-huge-14.pth",
+        "",
+        "",
+        1,
+        "none",
+        1,
+        0,
+        "video",
+        false,
+        "C:\\Users\\keit\\Documents\\me\\lora\\src\\musubi-tuner",
+        "",
+        "{}",
+        3600,
+        true
+      ]
+    }
+  ],
+  "links": [
+    [
+      6,
+      6,
+      0,
+      7,
+      0,
+      "*"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.7627768444385489,
+      "offset": [
+        -9613.89676150858,
+        -6783.207197842556
+      ]
+    },
+    "frontendVersion": "1.23.4"
+  },
+  "version": 0.4
+}
